@@ -10,6 +10,9 @@ python = "^3.11"
 requests = "^2.31.0"
 numpy = "^1.26.3"
 pytest = "^7.4.4"
+tqdm = "^4.66.1"
+python-dotenv = "^1.0.0"
+bs4 = "^0.0.2"
 
 
 [build-system]
