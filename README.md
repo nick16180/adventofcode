@@ -15,6 +15,8 @@ Copy the repo then run the following:
 ```bash
 cd adventofcode
 poetry install
+mkdir output
+mkdir data
 ```
 
 ## Usage
