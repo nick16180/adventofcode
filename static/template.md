@@ -22,8 +22,6 @@ Average Runtime: %runtime% seconds
 
 ### Code
 
-[See on Github](%github_url%)
-
 ```python
 %source%
 ```

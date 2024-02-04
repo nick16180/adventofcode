@@ -61,12 +61,12 @@ def is_nice2(s: str) -> bool:
     return test1 and test2
 
 
-def algo1(args):
+def algo1(args: str) -> int:
     lines = args.splitlines()
     return sum([int(is_nice1(line)) for line in lines])
 
 
-def algo2(args):
+def algo2(args: str) -> int:
     lines = args.splitlines()
     return sum([int(is_nice2(line)) for line in lines])
 

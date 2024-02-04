@@ -6,8 +6,9 @@ from pathlib import Path
 from hashlib import md5
 
 
-def f(args, n):
+def hash_search(args: str, n: int) -> int:
     # this is just a brute force search through all hashes
+    # looks for the first hash that has n leading zeroes
     # there might be a smarter way to do this but i am not implementing the
     # md5 algorithm
     found = False
@@ -23,12 +24,12 @@ def f(args, n):
     return i
 
 
-def algo1(args):
-    return f(args, 5)
+def algo1(args: str):
+    return hash_search(args, 5)
 
 
-def algo2(args):
-    return f(args, 6)
+def algo2(args: str):
+    return hash_search(args, 6)
 
 
 # set up problem

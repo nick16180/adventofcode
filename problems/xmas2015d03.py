@@ -3,9 +3,10 @@ from adventofcode.utils import read_text
 from dotenv import load_dotenv
 from os import environ
 from pathlib import Path
+from typing import List
 
 
-def f(args):
+def follow_directions(args: str) -> List:
     # starting coord
     p = [0, 0]
     locs = [p.copy()]
@@ -27,18 +28,18 @@ def f(args):
     return x
 
 
-def algo1(args):
-    x = f(args)
+def algo1(args: str) -> int:
+    x = follow_directions(args)
     return len(list(set(x)))
 
 
-def algo2(args):
+def algo2(args: str) -> int:
     # first direction is always santa, then robo
     # so just rerun the algorithm above with different sets of args
     santa = "".join([args[i] for i in range(len(args)) if i % 2 == 0])
     robo = "".join([args[i] for i in range(len(args)) if i % 2 == 1])
-    santax = f(santa)
-    robox = f(robo)
+    santax = follow_directions(santa)
+    robox = follow_directions(robo)
     x = santax + robox
     return len(list(set(x)))
 

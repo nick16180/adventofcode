@@ -6,7 +6,7 @@ from pathlib import Path
 from functools import reduce
 
 
-def accumulator(acc: dict, add):
+def accumulator(acc: dict, add) -> dict:
     if add in acc.keys():
         acc[add] += 1
     else:
@@ -14,12 +14,12 @@ def accumulator(acc: dict, add):
     return acc
 
 
-def algo1(args):
+def algo1(args: str) -> int:
     letter_count = reduce(accumulator, map(lambda x: x, args), {})
     return letter_count.get("(", 0) - letter_count.get(")", 0)
 
 
-def algo2(args):
+def algo2(args: str) -> int:
     pos = 0
     i = 0
     while pos >= 0 and i < len(args):

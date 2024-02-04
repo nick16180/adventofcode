@@ -5,7 +5,7 @@ from os import environ
 from pathlib import Path
 
 
-def algo1(args):
+def algo1(args: str) -> int:
     y = [[int(v) for v in line.split("x")] for line in args.splitlines()]
     # just use the formula given in the problem
     z = [[row[0] * row[1], row[1] * row[2], row[0] * row[2]] for row in y]
@@ -13,7 +13,7 @@ def algo1(args):
     return sum(zz)
 
 
-def algo2(args):
+def algo2(args: str) -> int:
     y = [[int(v) for v in line.split("x")] for line in args.splitlines()]
     # just use the formula given in the problem
     z = [row[0] * row[1] * row[2] + 2 * (sum(row) - max(row)) for row in y]
